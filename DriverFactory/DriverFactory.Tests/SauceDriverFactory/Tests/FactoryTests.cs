@@ -26,5 +26,13 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
             var driver = factory.CreateDriver();
             Assert.IsInstanceOfType(driver, typeof(RemoteFirefox));
         }
+
+        [TestMethod]
+        public void ItSetsDefaultToChromeLatestOnWindows10()
+        {
+            var factory = new FirefoxDriverFactory();
+            var driver = factory.CreateDriver();
+            Assert.IsInstanceOfType(driver, typeof(RemoteFirefox));
+        }
     }
 }
