@@ -32,14 +32,14 @@ namespace DriverFactory.Tests.Unit
         [TestMethod]
         public void ShouldReturnFirefoxOptions()
         {
-            var _sauceCaps = new SauceCaps
+            var sauceCaps = new SauceCaps
             {
                 Browser = BrowserType.Firefox
             };
             var stubDriver = new Mock<IRemoteDriver>();
 
             var driverManager = new DriverManager(stubDriver.Object);
-            driverManager.GetRemoteFirefox(_sauceCaps);
+            driverManager.GetRemoteFirefox(sauceCaps);
             driverManager.FirefoxOptions.Should().NotBeNull();
             driverManager.FirefoxOptions.GetType().Name.Should().Be("FirefoxOptions");
         }
