@@ -56,19 +56,29 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
             _factory.CreateDriver(sauceCaps);
             _factory.Options.Os.Should().Be("Linux");
         }
+
+        [TestMethod]
+        public void ItReturnsSameBrowserFromOptions()
+        {
+            var sauceCaps = new SauceOptions { Browser = "Firefox" };
+            _factory.CreateDriver(sauceCaps);
+            _factory.Options.Browser.Should().Be("Firefox");
+        }
     }
 
     public class RemoteWebDriverFactory
     {
         public RemoteDriver CreateDriver()
         {
+            Options = new SauceOptions();
             return new RemoteChrome();
         }
 
-        public SauceOptions Options => new SauceOptions();
+        public SauceOptions Options { get; set; }
 
         public RemoteDriver CreateDriver(SauceOptions sauceOptions)
         {
+            Options = sauceOptions;
             switch (sauceOptions.Browser.ToLower())
             {
                 case "firefox":
