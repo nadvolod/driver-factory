@@ -31,14 +31,30 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
         public void ItReturnsLinuxFromDefaultConstructor()
         {
             var driver = _factory.CreateDriver();
-            _factory.Session.Os.Should().Be("Linux");
+            _factory.Options.Os.Should().Be("Linux");
         }
 
         [TestMethod]
         public void ItReturnsLatestBrowserFromDefaultConstructor()
         {
             var driver = _factory.CreateDriver();
-            _factory.Session.BrowserVersion.Should().Be("latest");
+            _factory.Options.BrowserVersion.Should().Be("latest");
+        }
+
+        [TestMethod]
+        public void ItReturnsFirefoxWithDefaultSettings()
+        {
+            var sauceCaps = new SauceOptions {Browser = "Firefox"};
+            var driver = _factory.CreateDriver(sauceCaps);
+            driver.Should().BeOfType<RemoteFirefox>();
+        }
+
+        [TestMethod]
+        public void ItReturnsLinuxWhenOnlyBrowserIsSet()
+        {
+            var sauceCaps = new SauceOptions { Browser = "Firefox" };
+            _factory.CreateDriver(sauceCaps);
+            _factory.Options.Os.Should().Be("Linux");
         }
     }
 
@@ -49,12 +65,24 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
             return new RemoteChrome();
         }
 
-        public SauceSession Session => new SauceSession();
+        public SauceOptions Options => new SauceOptions();
+
+        public RemoteDriver CreateDriver(SauceOptions sauceOptions)
+        {
+            switch (sauceOptions.Browser.ToLower())
+            {
+                case "firefox":
+                    return new RemoteFirefox();
+                default:
+                    return new RemoteChrome();
+            }
+        }
     }
 
-    public class SauceSession
+    public class SauceOptions
     {
         public string Os { get; set; } = "Linux";
         public string BrowserVersion { get; set; } = "latest";
+        public string Browser { get; set; }
     }
 }
