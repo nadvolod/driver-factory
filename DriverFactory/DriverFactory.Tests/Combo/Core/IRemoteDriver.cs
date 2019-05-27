@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 
-namespace DriverFactory.Tests.Core
+namespace DriverFactory.Tests.Combo.Core
 {
     public interface IRemoteDriver
     {

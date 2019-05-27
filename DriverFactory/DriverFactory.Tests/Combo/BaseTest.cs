@@ -1,7 +1,7 @@
-﻿using DriverFactory.Tests.Core;
+﻿using DriverFactory.Tests.Combo.Core;
 using OpenQA.Selenium;
 
-namespace DriverFactory.Tests
+namespace DriverFactory.Tests.Combo
 {
     public class BaseTest
     {

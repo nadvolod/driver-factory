@@ -1,4 +1,4 @@
-﻿namespace DriverFactory.Tests.SauceDriverFactory.Concrete
+﻿namespace DriverFactory.Tests.AbstractFactory.Concrete
 {
     class FirefoxDriverFactory : RemoteDriverFactory
     {

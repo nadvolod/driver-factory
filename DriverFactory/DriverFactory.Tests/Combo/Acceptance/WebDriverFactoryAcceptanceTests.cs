@@ -1,10 +1,10 @@
-using DriverFactory.Tests.Core;
+using DriverFactory.Tests.Combo.Core;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [assembly: Parallelize(Workers = 0, Scope = ExecutionScope.MethodLevel)]
 
-namespace DriverFactory.Tests.Acceptance
+namespace DriverFactory.Tests.Combo.Acceptance
 {
     [TestClass]
     public class WebDriverFactoryAcceptanceTests : BaseTest

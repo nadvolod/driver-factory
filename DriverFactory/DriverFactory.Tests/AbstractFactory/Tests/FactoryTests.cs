@@ -1,7 +1,7 @@
-﻿using DriverFactory.Tests.SauceDriverFactory.Concrete;
+﻿using DriverFactory.Tests.AbstractFactory.Concrete;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DriverFactory.Tests.SauceDriverFactory.Tests
+namespace DriverFactory.Tests.AbstractFactory.Tests
 {
     [TestClass]
     public class FactoryTests

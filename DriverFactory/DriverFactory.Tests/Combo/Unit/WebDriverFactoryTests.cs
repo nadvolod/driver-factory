@@ -1,10 +1,10 @@
 using System;
-using DriverFactory.Tests.Core;
+using DriverFactory.Tests.Combo.Core;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace DriverFactory.Tests.Unit
+namespace DriverFactory.Tests.Combo.Unit
 {
     [TestClass]
     public class WebDriverFactoryTests : BaseTest

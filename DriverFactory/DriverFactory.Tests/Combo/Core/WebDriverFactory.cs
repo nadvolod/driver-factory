@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace DriverFactory.Tests.Core
+namespace DriverFactory.Tests.Combo.Core
 {
     public class WebDriverFactory
     {

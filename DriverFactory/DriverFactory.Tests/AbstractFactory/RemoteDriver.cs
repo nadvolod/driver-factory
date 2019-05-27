@@ -1,4 +1,4 @@
-﻿namespace DriverFactory.Tests.SauceDriverFactory
+﻿namespace DriverFactory.Tests.AbstractFactory
 {
     public abstract class RemoteDriver
     {

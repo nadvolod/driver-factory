@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
-namespace DriverFactory.Tests.Core
+namespace DriverFactory.Tests.Combo.Core
 {
     public class DriverManager : IDriverManager
     {

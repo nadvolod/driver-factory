@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace DriverFactory.Tests.Core
+namespace DriverFactory.Tests.Combo.Core
 {
     [Serializable]
     internal class SauceEnvironmentVariableNotSetException : Exception

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OpenQA.Selenium.Chrome;
 
-namespace DriverFactory.Tests.Core
+namespace DriverFactory.Tests.Combo.Core
 {
     public class SauceCaps
     {
