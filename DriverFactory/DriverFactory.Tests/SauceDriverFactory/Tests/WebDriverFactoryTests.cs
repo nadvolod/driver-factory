@@ -7,31 +7,38 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
     [TestClass]
     public class WebDriverFactoryTests
     {
-        private RemoteWebDriverFactory factory;
+        private RemoteWebDriverFactory _factory;
 
         [TestInitialize]
         public void Setup()
         {
-            factory = new RemoteWebDriverFactory();
+            _factory = new RemoteWebDriverFactory();
         }
         [TestMethod]
         public void ItExists()
         {
-            factory.Should().NotBeNull();
+            _factory.Should().NotBeNull();
         }
 
         [TestMethod]
         public void ItReturnsRemoteChromeFromDefaultConstructor()
         {
-            var driver = factory.CreateDriver();
+            var driver = _factory.CreateDriver();
             driver.Should().BeOfType<RemoteChrome>();
         }
 
         [TestMethod]
         public void ItReturnsLinuxFromDefaultConstructor()
         {
-            var driver = factory.CreateDriver();
-            factory.Session.Os.Should().Be("Linux");
+            var driver = _factory.CreateDriver();
+            _factory.Session.Os.Should().Be("Linux");
+        }
+
+        [TestMethod]
+        public void ItReturnsLatestBrowserFromDefaultConstructor()
+        {
+            var driver = _factory.CreateDriver();
+            _factory.Session.BrowserVersion.Should().Be("latest");
         }
     }
 
@@ -48,5 +55,6 @@ namespace DriverFactory.Tests.SauceDriverFactory.Tests
     public class SauceSession
     {
         public string Os { get; set; } = "Linux";
+        public string BrowserVersion { get; set; } = "latest";
     }
 }
