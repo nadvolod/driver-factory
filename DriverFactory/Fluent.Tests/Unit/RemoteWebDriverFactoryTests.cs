@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium.Chrome;
 
 namespace Fluent.Tests.Unit
 {
@@ -12,9 +13,19 @@ namespace Fluent.Tests.Unit
             var factory = new RemoteWebDriverFactory();
             factory.Should().NotBeNull();
         }
-    }
 
-    public class RemoteWebDriverFactory
-    {
+        [TestMethod]
+        public void RemoteWebDriver_Instantiated_SetsBrowserOptions()
+        {
+            var factory = new RemoteWebDriverFactory();
+            factory.BrowserOptions.Should().NotBeNull();
+        }
+
+        [TestMethod]
+        public void RemoteWebDriver_Instantiated_SetsBrowserOptionsToChrome()
+        {
+            var factory = new RemoteWebDriverFactory();
+            factory.BrowserOptions.Should().BeOfType<ChromeOptions>();
+        }
     }
 }
