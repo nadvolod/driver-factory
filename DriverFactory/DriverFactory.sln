@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverFactory.Tests", "DriverFactory.Tests\DriverFactory.Tests.csproj", "{87F91A10-7073-41C8-8F02-72C6F3D6F92D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriverFactory.Tests", "DriverFactory.Tests\DriverFactory.Tests.csproj", "{87F91A10-7073-41C8-8F02-72C6F3D6F92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent", "Fluent\Fluent.csproj", "{4F5F8308-A99A-4B32-99F6-3C809DD849E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Tests", "Fluent.Tests\Fluent.Tests.csproj", "{46828124-AA82-4AFA-8AAF-380EB5A9C994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{87F91A10-7073-41C8-8F02-72C6F3D6F92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F91A10-7073-41C8-8F02-72C6F3D6F92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F91A10-7073-41C8-8F02-72C6F3D6F92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5F8308-A99A-4B32-99F6-3C809DD849E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5F8308-A99A-4B32-99F6-3C809DD849E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5F8308-A99A-4B32-99F6-3C809DD849E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5F8308-A99A-4B32-99F6-3C809DD849E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46828124-AA82-4AFA-8AAF-380EB5A9C994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46828124-AA82-4AFA-8AAF-380EB5A9C994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46828124-AA82-4AFA-8AAF-380EB5A9C994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46828124-AA82-4AFA-8AAF-380EB5A9C994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
